@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Files must be commited before running
+
 unitypath="class-files/projects/unity"
 
 for dir in $unitypath/*/ ; do
