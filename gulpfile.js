@@ -50,10 +50,10 @@ var paths = {
         src: [src + "/fonts/**/*.*", "node_modules/font-awesome/fonts/*.*"],
         dest: dest + "/fonts"
     },
-    misc: {
-        src: [src + "/slides/**/*.*", src + "/projects/**/*.*"],
-        dest: dest
-    },
+    // misc: {
+    //     src: [src + "/slides/**/*.*", src + "/projects/**/*.*"],
+    //     dest: dest
+    // },
     deploy: {
         src: [dest + "/**/{*,*.*}"] // Match files with & without extensions
     }
@@ -199,12 +199,12 @@ gulp.task("fonts", function () {
         .pipe(gulp.dest(paths.fonts.dest));
 });
 
-// Take any (new) misc files from src/ over to build/
-gulp.task("misc", function () {
-    return gulp.src(paths.misc.src, { base: src })
-        .pipe(newer(paths.misc.dest))
-        .pipe(gulp.dest(paths.misc.dest));
-});
+// // Take any (new) misc files from src/ over to build/
+// gulp.task("misc", function () {
+//     return gulp.src(paths.misc.src, { base: src })
+//         .pipe(newer(paths.misc.dest))
+//         .pipe(gulp.dest(paths.misc.dest));
+// });
 
 // The build task will run all the individual build-related tasks above.
 gulp.task("build", [
@@ -215,7 +215,7 @@ gulp.task("build", [
     // "js-lint",
     // "js-browserify",
     "js-libs",
-    "misc"
+    // "misc"
 ]);
 
 
