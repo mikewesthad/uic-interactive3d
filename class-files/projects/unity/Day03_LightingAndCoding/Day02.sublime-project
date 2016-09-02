@@ -1,0 +1,11 @@
+{
+	"folders":
+	[
+		{
+			"path": ".",
+            "file_exclude_patterns": ["*.meta"],
+            "folder_exclude_patterns": ["Library", "Temp", "ProjectSettings"]
+		}
+	],
+    "solution_file": "./Day02.sln"
+}
