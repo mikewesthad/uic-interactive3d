@@ -1,3 +1,8 @@
+# SUBLIME GITIGNORE
+
+*.sublime-workspace
+
+
 # NODE GITIGNORE
 
 # Logs

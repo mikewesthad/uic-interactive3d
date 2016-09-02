@@ -51,7 +51,7 @@ var paths = {
         dest: dest + "/fonts"
     },
     misc: {
-        src: [src + "/slides/**/*.*"],
+        src: [src + "/slides/**/*.*", src + "/projects/**/*.*"],
         dest: dest
     },
     deploy: {
