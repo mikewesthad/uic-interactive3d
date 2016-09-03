@@ -1,11 +1,26 @@
 @import "variables";
-@import "fonts";
 
 @import "bootstrap";
 @import "font-awesome";
 
+@import "fonts";
+@import "mixins";
+
+
 body {
     padding-top: $navbar-height + 20px;
+}
+
+@include breakpoint-and-down(xs) {
+    h1 {
+        font-size: floor($font-size-h1 * 0.85);
+    }
+    h2 {
+        font-size: floor($font-size-h2 * 0.85);
+    }
+    h3 {
+        font-size: floor($font-size-h3 * 0.85);
+    }
 }
 
 .navbar {
@@ -15,6 +30,10 @@ body {
         font-family: "Big John";
         font-weight: 600;
         font-size: 30px;
+
+        @include breakpoint-and-down(xs) {
+            font-size: 25px;
+        }
     }
 
     .navbar-nav {
@@ -22,8 +41,13 @@ body {
         font-weight: 100;
         font-size: 20px;
         
-        li a {
-            padding-left: 10px;
+        // Centering the dropdown links in the mobile menu 
+        li {
+            text-align: center;
+            a {
+                padding-left: 10px;
+                display: inline-block;
+            }
         }
 
         .nav-underline {
